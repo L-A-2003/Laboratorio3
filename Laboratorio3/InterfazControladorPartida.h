@@ -12,26 +12,26 @@ using namespace std;
 
 class InterfazControladorPartida {
 public:
-	InterfazControladorPartida();
+	virtual ~InterfazControladorPartida() = default;
 	
-	vector<DtPartida*> listarPartidas();
-	vector<DtPartidaSinTerminar*> listarPartidasSinTerminar();
-	vector<DtPartidaEnTransmision*> listarPartidasEnTransmision();
-	vector<DtPartida*> historialPartidasIndividualesFinalizadas();
-	void confirmarAbandonarPartida(int);
-	void seleccionarPartida(int);
-	void finalizarPartida(int);
-	void transmitirPartida(bool);
-	void agregarJugadorPartida(string);
-	void iniciarPartida();
-	void cancelarPartida();
-	void cancelarAbandonarPartida();
-	void cancelarFinalizacion();
-	vector<DtComentarioExistente*> listarComentariosExistentes();
-	vector<int>seleccionarComentarioResponder();
-	void ingresarTexto(string);
-	void confirmarComentario(DtComentario*);
-	void cancelarComentario();
+	virtual vector<DtPartida*> listarPartidas() = 0;
+	virtual vector<DtPartidaSinTerminar*> listarPartidasSinTerminar() = 0;
+	virtual vector<DtPartidaEnTransmision*> listarPartidasEnTransmision() = 0;
+	virtual vector<DtPartida*> historialPartidasIndividualesFinalizadas() = 0;
+	virtual void confirmarAbandonarPartida(int) = 0;
+	virtual void seleccionarPartida(int) = 0;
+	virtual void finalizarPartida(int) = 0;
+	virtual void transmitirPartida(bool) = 0;
+	virtual void agregarJugadorPartida(string) = 0;
+	virtual void iniciarPartida() = 0;
+	virtual void cancelarPartida() = 0;
+	virtual void cancelarAbandonarPartida() = 0;
+	virtual void cancelarFinalizacion() = 0;
+	virtual vector<DtComentarioExistente*> listarComentariosExistentes() = 0;
+	virtual vector<int>seleccionarComentarioResponder() = 0;
+	virtual void ingresarTexto(string) = 0;
+	virtual void confirmarComentario(DtComentario*) = 0;
+	virtual void cancelarComentario() = 0;
 private:
 };
 

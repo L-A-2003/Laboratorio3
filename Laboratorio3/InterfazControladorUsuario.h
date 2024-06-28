@@ -8,17 +8,17 @@ using namespace std;
 
 class InterfazControladorUsuario {
 public:
-	InterfazControladorUsuario();
+	virtual ~InterfazControladorUsuario() = default;
 	
-	vector<string> listarJugadoresVideojuego();
-	vector<string> listarJugadores();
-	void ingresarDatosUsuario(DtUsuario*);
-	void ingresarNombreEmpresa(string);
-	void ingresarNickname(string);
-	void ingresarDescripcion(string);
-	void cancelarUsuario();
-	void darAltaUsuario();
-	void seguirJugador(string);
+	virtual vector<string> listarJugadoresVideojuego() = 0;
+	virtual vector<string> listarJugadores() = 0;
+	virtual void ingresarDatosUsuario(DtUsuario*) = 0;
+	virtual void ingresarNombreEmpresa(string) = 0;
+	virtual void ingresarNickname(string) = 0;
+	virtual void ingresarDescripcion(string) = 0;
+	virtual void cancelarUsuario() = 0;
+	virtual void darAltaUsuario() = 0;
+	virtual void seguirJugador(string) = 0;
 private:
 };
 

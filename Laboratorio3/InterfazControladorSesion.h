@@ -7,11 +7,11 @@ using namespace std;
 
 class InterfazControladorSesion {
 public:
-	InterfazControladorSesion();
+	virtual ~InterfazControladorSesion() = default;
 	
-	void iniciarSesion(string, string);
-	void cancelarIniciarSesion();
-	Usuario* obtenerUsuarioActual(); 
+	virtual void iniciarSesion(string, string) = 0;
+	virtual void cancelarIniciarSesion() = 0;
+	virtual Usuario* obtenerUsuarioActual() = 0; 
 private:
 };
 

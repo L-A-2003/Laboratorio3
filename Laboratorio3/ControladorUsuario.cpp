@@ -1,6 +1,5 @@
 #include "ControladorUsuario.h"
 #include<iostream>
-
 ControladorUsuario::ControladorUsuario() {
 	
 }
